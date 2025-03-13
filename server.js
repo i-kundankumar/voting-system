@@ -30,6 +30,13 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-    console.log(`Server running on http://0.0.0.0:${PORT}`);
+const HOST = '0.0.0.0';
+
+server.listen(PORT, HOST, () => {
+    console.log(`Server is running on http://${HOST}:${PORT}`);
 });
+
+// Prevent timeout issues
+server.keepAliveTimeout = 0; // No timeout
+server.headersTimeout = 0; // No timeout
+server.requestTimeout = 0; // No timeout
