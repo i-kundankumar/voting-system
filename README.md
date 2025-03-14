@@ -10,7 +10,7 @@ A simple app where users can vote and see results update in real-time across all
 ## Setup Instructions
 1. Clone the repo: `git clone <repo-url>`
 2. Navigate to the folder: `cd real-time-voting`
-3. Install dependencies: `npm install`
+3. Install dependencies: `npm install express socket.io`
 4. Start the server: `node server.js`
 5. Open `http://localhost:3000/` in a browser.
 
